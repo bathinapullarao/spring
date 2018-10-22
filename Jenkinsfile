@@ -11,13 +11,8 @@ stage('gitCheckout')
     	}
   stage('Sonar')
 	{
-        try {
-            sh "mvn clean install sonar:sonar -P sonar"
-            } 
-	catch(error)
-	    {
-            echo "The sonar server could not be reached ${error}"
-            }
+            sh "mvn clean install"
+         
         }
 	
 }
