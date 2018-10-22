@@ -14,5 +14,9 @@ stage('gitCheckout')
             sh "mvn clean install"
          
         }
+stage('deploy')
+	{
+	sh "mvn tomcat7:deploy"
+	}
 	
 }
